@@ -2,11 +2,8 @@ This project is built upon the emg2qwerty work from Meta. The first section of t
 
 We explore various deep learning architectures for decoding surface electromyography (sEMG) signals using the emg2qwerty dataset. We investigate the effectiveness of hybrid models that combine CNNs with recurrent architectures, namely LSTMs, GRUs, and transformers. We train and evaluate CNN+GRU, CNN+LSTM, and CNN+LSTM+Transformer models and compare their performance in terms of Character Error Rate (CER) and Connectionist Temporal Classification (CTC) loss. Our results indicate that combinations of 2 layer CNNs paired with LSTMs and GRUs significantly improve CER and CTC loss compared to existing baselines. 
 
-## Guiding Tips + FAQs
-_Last updated 2/13/2025_
-- Read through the Project Guidelines to ensure that you have a clear understanding of what we expect
-- Familiarize yourself with the prediction task and get a high-level understanding of their base architecture (it would be beneficial to read about CTC loss)
-- Get comfortable with the codebase
+## FAQs
+- Getting comfortable with the codebase
   - ```lightning.py``` + ```modules.py``` - where most of your model architecture development will take place
   - ```data.py``` - defines PyTorch dataset (likely will not need to touch this much)
   - ```transforms.py``` - implement more data transforms and other preprocessing techniques
