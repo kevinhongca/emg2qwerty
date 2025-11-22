@@ -1,5 +1,6 @@
 This project is built upon the emg2qwerty work from Meta. The first section of this README provides a brief abstract and some guidance for working with the repo and contains a running list of FAQs. **Note that the rest of the README is from the original repo.**
 
+## Abstract
 We explore various deep learning architectures for decoding surface electromyography (sEMG) signals using the emg2qwerty dataset. We investigate the effectiveness of hybrid models that combine CNNs with recurrent architectures, namely LSTMs, GRUs, and transformers. We train and evaluate CNN+GRU, CNN+LSTM, and CNN+LSTM+Transformer models and compare their performance in terms of Character Error Rate (CER) and Connectionist Temporal Classification (CTC) loss. Our results indicate that combinations of 2 layer CNNs paired with LSTMs and GRUs significantly improve CER and CTC loss compared to existing baselines. 
 
 ## FAQs
