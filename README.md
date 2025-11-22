@@ -1,4 +1,6 @@
-This project is built upon the emg2qwerty work from Meta. The first section of this README provides some guidance for working with the repo and contains a running list of FAQs. **Note that the rest of the README is from the original repo.**
+This project is built upon the emg2qwerty work from Meta. The first section of this README provides a brief abstract and some guidance for working with the repo and contains a running list of FAQs. **Note that the rest of the README is from the original repo.**
+
+We explore various deep learning architectures for decoding surface electromyography (sEMG) signals using the emg2qwerty dataset. We investigate the effectiveness of hybrid models that combine CNNs with recurrent architectures, namely LSTMs, GRUs, and transformers. We train and evaluate CNN+GRU, CNN+LSTM, and CNN+LSTM+Transformer models and compare their performance in terms of Character Error Rate (CER) and Connectionist Temporal Classification (CTC) loss. Our results indicate that combinations of 2 layer CNNs paired with LSTMs and GRUs significantly improve CER and CTC loss compared to existing baselines. 
 
 ## Guiding Tips + FAQs
 _Last updated 2/13/2025_
@@ -15,7 +17,7 @@ _Last updated 2/13/2025_
 # emg2qwerty
 [ [`Paper`](https://arxiv.org/abs/2410.20081) ] [ [`Dataset`](https://fb-ctrl-oss.s3.amazonaws.com/emg2qwerty/emg2qwerty-data-2021-08.tar.gz) ] [ [`Blog`](https://ai.meta.com/blog/open-sourcing-surface-electromyography-datasets-neurips-2024/) ] [ [`BibTeX`](#citing-emg2qwerty) ]
 
-A dataset of surface electromyography (sEMG) recordings while touch typing on a QWERTY keyboard with ground-truth, benchmarks and baselines.
+A dataset of sEMG recordings while touch typing on a QWERTY keyboard with ground-truth, benchmarks and baselines.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/71a9f361-7685-4188-83c3-099a009b6b81" height="80%" width="80%" alt="alt="sEMG recording" >
