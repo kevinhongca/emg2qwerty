@@ -1,16 +1,15 @@
-This project is built upon the emg2qwerty work from Meta. The first section of this README provides a brief abstract and some guidance for working with the repo and contains a running list of FAQs. **Note that the rest of the README is from the original repo.**
+This project is built upon the emg2qwerty work from Meta. The first section of this README provides a brief abstract and some guidance for working with the repo. **Note that the rest of the README is from the original repo.**
 
 ## Abstract
 We explore various deep learning architectures for decoding surface electromyography (sEMG) signals using the emg2qwerty dataset. We investigate the effectiveness of hybrid models that combine CNNs with recurrent architectures, namely LSTMs, GRUs, and transformers. We train and evaluate CNN+GRU, CNN+LSTM, and CNN+LSTM+Transformer models and compare their performance in terms of Character Error Rate (CER) and Connectionist Temporal Classification (CTC) loss. Our results indicate that combinations of 2 layer CNNs paired with LSTMs and GRUs significantly improve CER and CTC loss compared to existing baselines. 
 
-## FAQs
-- Getting comfortable with the codebase
-  - ```lightning.py``` + ```modules.py``` - where most of your model architecture development will take place
-  - ```data.py``` - defines PyTorch dataset (likely will not need to touch this much)
-  - ```transforms.py``` - implement more data transforms and other preprocessing techniques
-  - ```config/*.yaml``` - modify model hyperparameters and PyTorch Lightning training configuration
-    - **Q: How do we update these configuration files?** A: Note the structure of YAML files include basic key-value pairs (i.e. ```<key>: <value>```) and hierarchical structure. So, for instance, if we wanted to update the ```mlp_features``` hyperparameter of the ```TDSConvCTCModule```, we would change the value at line 5 of ```config/model/tds_conv_ctc.yaml``` (under ```module```). _Read more details [here](https://pytorch-lightning.readthedocs.io/en/1.3.8/common/lightning_cli.html)._
-    - **Q: Where do we configure data splitting?** A: Refer to ```config/user/single_user.yaml```. Be careful with your edits, so that you don't accidentally move the test data into your training set.
+## Getting comfortable with the codebase
+- ```lightning.py``` + ```modules.py``` - where most of your model architecture development will take place
+- ```data.py``` - defines PyTorch dataset (likely will not need to touch this much)
+- ```transforms.py``` - implement more data transforms and other preprocessing techniques
+- ```config/*.yaml``` - modify model hyperparameters and PyTorch Lightning training configuration
+  - **Q: How do we update these configuration files?** A: Note the structure of YAML files include basic key-value pairs (i.e. ```<key>: <value>```) and hierarchical structure. So, for instance, if we wanted to update the ```mlp_features``` hyperparameter of the ```TDSConvCTCModule```, we would change the value at line 5 of ```config/model/tds_conv_ctc.yaml``` (under ```module```). _Read more details [here](https://pytorch-lightning.readthedocs.io/en/1.3.8/common/lightning_cli.html)._
+  - **Q: Where do we configure data splitting?** A: Refer to ```config/user/single_user.yaml```. Be careful with your edits, so that you don't accidentally move the test data into your training set.
 
 # emg2qwerty
 [ [`Paper`](https://arxiv.org/abs/2410.20081) ] [ [`Dataset`](https://fb-ctrl-oss.s3.amazonaws.com/emg2qwerty/emg2qwerty-data-2021-08.tar.gz) ] [ [`Blog`](https://ai.meta.com/blog/open-sourcing-surface-electromyography-datasets-neurips-2024/) ] [ [`BibTeX`](#citing-emg2qwerty) ]
